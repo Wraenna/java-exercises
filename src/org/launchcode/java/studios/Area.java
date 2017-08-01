@@ -17,7 +17,11 @@ public class Area {
         print an error message and quit.
          */
 
-        Double area = pi * radius * radius;
-        System.out.println("The area of a circle of radius " + radius + " is: " + area);
+        if (radius <= 0) {
+            System.out.println("Your radius needs to be greater than zero.");
+        } else {
+            Double area = pi * radius * radius;
+            System.out.println("The area of a circle of radius " + radius + " is: " + area);
+        }
     }
 }
