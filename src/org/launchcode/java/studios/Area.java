@@ -11,17 +11,16 @@ public class Area {
         System.out.println("Please enter a radius: ");
         radius = rad.nextDouble();
 
-        /*
-        TODO - Validate by using an if loop.
-        If the user enters a number less than 0,
-        print an error message and quit.
-         */
-
         if (radius <= 0) {
-            System.out.println("Your radius needs to be greater than zero.");
-        } else {
+            while (radius <= 0) {
+                System.out.println("Your radius needs to be greater than zero.");
+                System.out.println("Please enter a radius: ");
+                radius = rad.nextDouble();
+            }
+        }
+
             Double area = pi * radius * radius;
             System.out.println("The area of a circle of radius " + radius + " is: " + area);
-        }
+
     }
 }
